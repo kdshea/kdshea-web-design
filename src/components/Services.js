@@ -6,7 +6,7 @@ const Services = () => {
           <h2>Is your web presence working for you?</h2>
           <p>Need a new website?</p>
           <p>Want a better one? </p>
-          <p>Need a full stack web application?</p>
+          <p>What about an app?</p>
           <p className="services-text">If someone needs what you provide, will your website draw them in? Will it be accessible from their phone? A responsive & accessible web presence is no longer merely a  &#39;nice to have&#39; - it is essential to any business. I offer individuals and small businesses a chance to be seen on the web. Whether that be creating a website for you from the ground up, or updating an existing presence for the mobile age.</p>
         </header>
         <div className="services-flex">

@@ -1,5 +1,6 @@
-$baby-powder: #FCF9F4;
+$baby-powder: #F9F6F6;
 $cream: #F9F4E9;
+$light-grey: #F6F6FC;
 $dark-blue: #172C3C;
 $tan: #E2CDB5;
 $brown: #B97853;
@@ -40,10 +41,9 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: $medium-green;
-  font-weight: $extra-bold;
 }
 h3 {
-  color: $medium-green;
+  color: $dark-blue;
 }
 header{
   margin: 3rem;
@@ -72,7 +72,7 @@ header{
   justify-content: center;
 }
 .btn:hover {
-  color:$tan;
+  color:$medium-green;
   background-color: $baby-powder;
   border: 1px solid rgba(0,0,0,.125);
 }
@@ -118,14 +118,15 @@ header{
 // NAV BAR STYLES
 
 nav{
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   z-index: 1;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
   .nav-link, .navbar-brand {
-    color: $tan;
+    color: $cream;
   }
   .navbar-toggler {
     background-color: $tan;
@@ -195,6 +196,9 @@ video {
   h2, h3{
     color: $baby-powder;
   }
+  .dev{
+    font-size: 4rem;
+  }
   a{
     text-decoration: none;
     color: inherit;
@@ -206,15 +210,31 @@ video {
   100% {transform: translateY(-10px);}
 }
 
+.hero-bottom{
+  padding-top: 10vh;
+}
+
+.hero-large{
+  display: none;
+}
+
 .hero-arrow {
   animation: bounce 0.75s ease infinite alternate;
   padding-top: 10vh;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width : 992px) {
   .hero {
+    .hero-small{
+      display: none;
+    }
+    .hero-large{
+      display:block;
+    }
     top: 50%;
-    .hero-arrow {
+    .hero-arrow{
       padding-top: 15vh;
     }
   }
@@ -311,6 +331,14 @@ video {
 // EXPERIENCE SECTION STYLES
 .vertical-timeline-element-title, .vertical-timeline-element-subtitle{
   font-family: $body;
+}
+
+// Line color
+.vertical-timeline::before {
+  background: $dark-blue;
+}
+.vertical-timeline-element-icon {
+  box-shadow: none;
 }
 .hide-experience {
   text-align: left;
@@ -436,7 +464,7 @@ video {
     margin: 0;
 
     .cell {
-      background-color: $baby-powder;
+      background-color: white;
     }
   }
   
@@ -487,7 +515,7 @@ video {
       }
     }
     a:hover {
-      color:$tan;
+      color:$medium-green;
     }
   }
 }
@@ -519,6 +547,9 @@ video {
 // ABOUT SECTION STYLES
 
 .about-wrapper {
+  h2{
+    color: $dark-blue;
+  }
   min-height: 100vh;
   .about-title{
     width: 80%;
@@ -535,9 +566,10 @@ video {
     text-align: left;
   }
 }
-
 .about-text{
   max-width: 600px;
+}
+.about-text, .background-text{
   p{
     font-size: 1rem;
     margin: 1rem auto;
@@ -557,7 +589,7 @@ video {
   padding-bottom: 2rem;
 }
 .about-icon{
-  color: $medium-green;
+  color: $dark-blue;
   font-size: 3rem;
   margin-right: 1rem;
 }
@@ -576,7 +608,7 @@ video {
     font-size: 1.5rem;
   }
   a:hover {
-    color:$tan;
+    color:$medium-green !important;
   }
 
   @media only screen and (max-width : 576px) {
@@ -629,6 +661,9 @@ video {
 }
 
 .about-background, .about-education{
+  p{
+    font-size: 1rem;
+  }
   .card-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -679,8 +714,8 @@ video {
     margin: 1rem auto;
     .card-header {
       margin-bottom: 1rem;
-      background-color: $tan;
-      color: $baby-powder;
+      background-color: $dark-blue;
+      color: white;
       font-size: 1.25rem;
       font-weight: 500;
     }
@@ -715,8 +750,14 @@ video {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
 }
+
+.about-photography{
+  p{
+    width: 80%;
+  }
+}
 .photo-wrapper{
-  background-color: $dark-green;
+  background-color: black;
   padding: 2rem;
 }
 
@@ -748,18 +789,32 @@ video {
   .kate-pic{
     width: 100%;
   }
+  .background-text{
+    background-image: url(../assets/shadow.jpg), $white-overlay;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom right;
+    padding: 40px 0;
+    margin: 5rem 10rem;
+  }
 }
 
 // CONSTULATION SECTION STYLES
 
 .form-flex{
-  border-top: solid white 5px;
+  border-top: solid $dark-blue 2px;
   padding-top: 5vh;
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 100%;
+  header{
+    p{
+      font-weight: normal;
+    }
+  }
   a {
     color: $dark-blue;
     text-decoration: none;
@@ -769,7 +824,7 @@ video {
     font-weight: bold;
   }
   a:hover {
-    color:$tan;
+    color:$medium-green;
   }
 }
 
@@ -808,11 +863,20 @@ form {
   margin-bottom: 0.5rem;
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
+input[type="text"]{
+  background-color: $baby-powder;
+}
+
+input[type="email"]{
+  background-color: $baby-powder;
+}
+
+textarea {
+  background-color: $baby-powder !important;
+}
 select {
   font-size: 1rem;
+  background-color: $baby-powder !important;
 }
 
 textarea {
@@ -875,7 +939,7 @@ textarea {
     font-size: 1rem;
   }
   a:hover {
-    color:$tan;
+    color:$medium-green;
   }
 }
 

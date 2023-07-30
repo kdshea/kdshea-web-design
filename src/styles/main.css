@@ -9,7 +9,7 @@ html {
 }
 
 .site-wrapper {
-  background-color: #F9F4E9;
+  background-color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: light;
 }
@@ -25,11 +25,10 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #689717;
-  font-weight: 800;
 }
 
 h3 {
-  color: #689717;
+  color: #172C3C;
 }
 
 header {
@@ -48,7 +47,7 @@ header p {
   border-radius: 8px;
   width: 200px;
   padding: 10px;
-  background-color: #FCF9F4;
+  background-color: #F9F6F6;
   margin: 2rem;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -59,8 +58,8 @@ header p {
 }
 
 .btn:hover {
-  color: #E2CDB5;
-  background-color: #FCF9F4;
+  color: #689717;
+  background-color: #F9F6F6;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -104,7 +103,8 @@ header p {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
@@ -112,7 +112,7 @@ nav {
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
 nav .nav-link, nav .navbar-brand {
-  color: #E2CDB5;
+  color: #F9F4E9;
 }
 nav .navbar-toggler {
   background-color: #E2CDB5;
@@ -171,7 +171,7 @@ video {
   text-align: center;
   margin: 0;
   transform: translateY(-50%);
-  color: #FCF9F4;
+  color: #F9F6F6;
 }
 .hero h1 {
   font-weight: normal;
@@ -179,7 +179,10 @@ video {
   margin: 2rem auto;
 }
 .hero h2, .hero h3 {
-  color: #FCF9F4;
+  color: #F9F6F6;
+}
+.hero .dev {
+  font-size: 4rem;
 }
 .hero a {
   text-decoration: none;
@@ -194,14 +197,30 @@ video {
     transform: translateY(-10px);
   }
 }
+.hero-bottom {
+  padding-top: 10vh;
+}
+
+.hero-large {
+  display: none;
+}
+
 .hero-arrow {
   animation: bounce 0.75s ease infinite alternate;
   padding-top: 10vh;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 992px) {
   .hero {
     top: 50%;
+  }
+  .hero .hero-small {
+    display: none;
+  }
+  .hero .hero-large {
+    display: block;
   }
   .hero .hero-arrow {
     padding-top: 15vh;
@@ -274,7 +293,7 @@ video {
 .cell {
   display: flex;
   flex-direction: column;
-  background-color: #FCF9F4;
+  background-color: #F9F6F6;
 }
 
 @media only screen and (min-width: 992px) {
@@ -290,6 +309,14 @@ video {
 }
 .vertical-timeline-element-title, .vertical-timeline-element-subtitle {
   font-family: "Open Sans", sans-serif;
+}
+
+.vertical-timeline::before {
+  background: #172C3C;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: none;
 }
 
 .hide-experience {
@@ -358,7 +385,7 @@ video {
 .project {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 25px;
-  background-color: #FCF9F4;
+  background-color: #F9F6F6;
   margin: 2rem 0;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -409,7 +436,7 @@ video {
   margin: 0;
 }
 .info-wrapper .project-icons .cell {
-  background-color: #FCF9F4;
+  background-color: white;
 }
 .info-wrapper .project-icons-wrapper {
   max-width: 400px;
@@ -451,7 +478,7 @@ video {
   padding: 0;
 }
 .info-wrapper .project-links a:hover, .info-wrapper .project-left a:hover {
-  color: #E2CDB5;
+  color: #689717;
 }
 
 @media only screen and (min-width: 768px) {
@@ -476,6 +503,9 @@ video {
 .about-wrapper {
   min-height: 100vh;
 }
+.about-wrapper h2 {
+  color: #172C3C;
+}
 .about-wrapper .about-title {
   width: 80%;
   margin: 0 auto;
@@ -494,7 +524,8 @@ video {
 .about-text {
   max-width: 600px;
 }
-.about-text p {
+
+.about-text p, .background-text p {
   font-size: 1rem;
   margin: 1rem auto;
   max-width: 75%;
@@ -513,7 +544,7 @@ video {
 }
 
 .about-icon {
-  color: #689717;
+  color: #172C3C;
   font-size: 3rem;
   margin-right: 1rem;
 }
@@ -531,7 +562,7 @@ video {
   font-size: 1.5rem;
 }
 #about a:hover, #more-about a:hover {
-  color: #E2CDB5;
+  color: #689717 !important;
 }
 @media only screen and (max-width: 576px) {
   #about .about-flex, #more-about .about-flex {
@@ -569,7 +600,7 @@ video {
 .card {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 25px;
-  background-color: #FCF9F4;
+  background-color: #F9F6F6;
   margin: 2rem 0;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
@@ -583,6 +614,9 @@ video {
   margin-top: 1rem;
 }
 
+.about-background p, .about-education p {
+  font-size: 1rem;
+}
 .about-background .card-wrapper, .about-education .card-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -637,8 +671,8 @@ video {
 }
 .about-reading .card .card-header, .about-listening .card .card-header {
   margin-bottom: 1rem;
-  background-color: #E2CDB5;
-  color: #FCF9F4;
+  background-color: #172C3C;
+  color: white;
   font-size: 1.25rem;
   font-weight: 500;
 }
@@ -669,8 +703,12 @@ video {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+.about-photography p {
+  width: 80%;
+}
+
 .photo-wrapper {
-  background-color: #0E1806;
+  background-color: black;
   padding: 2rem;
 }
 
@@ -703,15 +741,27 @@ video {
   .kate-pic {
     width: 100%;
   }
+  .background-text {
+    background-image: url(../assets/shadow.jpg), linear-gradient(rgba(242, 235, 226, 0.9), rgba(242, 235, 226, 0.9));
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom right;
+    padding: 40px 0;
+    margin: 5rem 10rem;
+  }
 }
 .form-flex {
-  border-top: solid white 5px;
+  border-top: solid #172C3C 2px;
   padding-top: 5vh;
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 100%;
+}
+.form-flex header p {
+  font-weight: normal;
 }
 .form-flex a {
   color: #172C3C;
@@ -721,7 +771,7 @@ video {
   font-weight: bold;
 }
 .form-flex a:hover {
-  color: #E2CDB5;
+  color: #689717;
 }
 
 .form-group {
@@ -759,11 +809,21 @@ form {
   margin-bottom: 0.5rem;
 }
 
-input[type=text],
-input[type=email],
-textarea,
+input[type=text] {
+  background-color: #F9F6F6;
+}
+
+input[type=email] {
+  background-color: #F9F6F6;
+}
+
+textarea {
+  background-color: #F9F6F6 !important;
+}
+
 select {
   font-size: 1rem;
+  background-color: #F9F6F6 !important;
 }
 
 textarea {
@@ -792,7 +852,7 @@ textarea {
 
 .footer {
   text-align: center;
-  color: #FCF9F4;
+  color: #F9F6F6;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -819,12 +879,12 @@ textarea {
 }
 .feedback a {
   text-decoration: none;
-  color: #FCF9F4;
+  color: #F9F6F6;
   transition: color 0.25s;
   font-size: 1rem;
 }
 .feedback a:hover {
-  color: #E2CDB5;
+  color: #689717;
 }
 
 .copyright {

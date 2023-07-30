@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer'
 import MapIcon from '@material-ui/icons/Map'
@@ -57,36 +57,36 @@ const Consultation = () => {
           </header>
           <VerticalTimeline>
             <VerticalTimelineElement
-              contentStyle={{ color: '#172C3C', borderTop: '2px solid #172C3C' }}
+              contentStyle={{ color: '#172C3C', borderTop: '2px solid #172C3C', background: '#F8F6F6' }}
               iconStyle={{ background: '#172C3C', color: '#fff' }}
               icon={<QuestionAnswerIcon/>}
             >
               <h3 className="vertical-timeline-element-title">Consultation</h3>
-              <p>Fill out the consultation form to give me an idea of your vision and the scope of the project. From there, we&#39;ll have a conversation to lay the foundations and go over your options</p>
+              <p>Fill out the consultation form to give me an idea of your vision and the scope of the project. From there, we&#39;ll have a conversation to lay the foundations and go over your options.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              contentStyle={{ color: '#172C3C', borderTop: '2px solid #B97853' }}
-              iconStyle={{ background: '#B97853', color: '#fff' }}
+              contentStyle={{ color: '#172C3C', borderTop: '2px solid #172C3C', background: '#F8F6F6' }}
+              iconStyle={{ background: '#172C3C', color: '#fff' }}
               icon={<MapIcon />}
             >
               <h3 className="vertical-timeline-element-title">Proposal</h3>
-              <p>I&#39;ll put together a detailed project proposal and a plan of action. I aim to create sites that are aligned with you and your business goals, and speak to your dream customers and guide them to you</p>
+              <p>I&#39;ll put together a detailed project proposal and a plan of action. I aim to create sites that are aligned with you and your business goals, and speak to your dream customers and guide them to you.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              contentStyle={{ color: '#172C3C', borderTop: '2px solid #CCD6A5' }}
-              iconStyle={{ background: '#CCD6A5', color: '#fff' }}
+              contentStyle={{ color: '#172C3C', borderTop: '2px solid #172C3C', background: '#F8F6F6' }}
+              iconStyle={{ background: '#172C3C', color: '#fff' }}
               icon={<BuildIcon />}
             >
               <h3 className="vertical-timeline-element-title">Creation</h3>
-              <p>I&#39;ll design a visual mock up of your project and we&#39;ll go over it together to make sure it fits your vision. After that, it&#39;s time to build. You&#39;ll receive regular updates regarding the project status throughout creation and testing, along with previews and revisions</p>
+              <p>I&#39;ll design a visual mock up of your project and we&#39;ll go over it together to make sure it fits your vision. After that, it&#39;s time to build. You&#39;ll receive regular updates regarding the project status throughout creation and testing, along with previews and revisions.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              contentStyle={{ color: '#172C3C', borderTop: '2px solid #689717' }}
-              iconStyle={{ background: '#689717', color: '#fff' }}
+              contentStyle={{ color: '#172C3C', borderTop: '2px solid #172C3C', background: '#F8F6F6' }}
+              iconStyle={{ background: '#172C3C', color: '#fff' }}
               icon={<ThumbUpAltIcon />}
             >
               <h3 className="vertical-timeline-element-title">Launch & Support</h3>
-              <p>After fine-tuning the look, performance, and responsiveness, we&#39;ll launch and transfer to your domain name. With ongoing support, you&#39;ll never feel alone in managing your project. I&#39;m available to answer your questions and address any issues that may arise</p>
+              <p>After fine-tuning the look, performance, and responsiveness, we&#39;ll launch and transfer to your domain name. With ongoing support, you&#39;ll never feel alone in managing your project. I&#39;m available to answer your questions and address any issues that may arise.</p>
             </VerticalTimelineElement>
             
           </VerticalTimeline>

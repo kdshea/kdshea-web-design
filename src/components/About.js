@@ -184,7 +184,7 @@ const About = () => {
                   <Card.Img variant="top" src={Kdshea} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Freelance Full Stack Developer</Card.Title>
+                  <Card.Title>Full Stack Developer</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">kdshea web design, Boston, MA</Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">2021 - Now ·  {getEmploymentDuration('2021-06-01')}</Card.Subtitle>
                 </Card.Body>
@@ -210,6 +210,11 @@ const About = () => {
                 </Card.Body>
               </Card>
             </div>
+            {/* <div className="background-text">
+              <p>In the early years of my career, I primarily focused on front-end development and utilized my skills to make updates for the restaurant groups I worked for. This involved tasks such as modifying opening hours, updating photos, and managing menus. I gained valuable experience in working with real-world clients and understanding their specific needs.</p>
+              <p>In June 2021, I decided to take on a side hustle and started building static websites for local small businesses. This allowed me to further expand my skills and gain practical experience in developing sites from scratch. I dedicated my free time to crafting visually appealing and functional websites for my clients.</p>
+              <p>As I progressed in my career, I realized the importance of rounding out my skill set and gaining a deeper understanding of back-end development. To achieve this, I made the decision to enroll in a program that included comprehensive training in both front-end and back-end development. This experience provided me with the knowledge and hands-on practice needed to become a well-rounded web professional.</p>
+            </div> */}
           </div>
           <div className="about-reading">
             <div className="about-title">
@@ -316,7 +321,7 @@ const About = () => {
                 columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                 <Masonry gutter='1.5rem'>
                   {images.map((image, i) => (
-                    <img key={i} src={image} style={{ width: '100%', display: 'block' }}
+                    <img key={i} src={image} alt={'Flickr'} style={{ width: '100%', display: 'block' }}
                     />
                   ))}
                 </Masonry>
