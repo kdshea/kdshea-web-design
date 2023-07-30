@@ -13,7 +13,7 @@ const Projects = () => {
       <div id="work" className="container">
         <header>
           <h2>Code Samples</h2>
-          <p className="services-text">Here are some recent projects I&#39;ve worked on, showcasing my skills as a full stack develoepr. Whether it&#39;s optimizing user experiences, implementing responsive designs, or integrating cutting-edge features, I&#39;m committed to creating functional and visually appealing websites that align with your business goals. </p>
+          <p className="services-text">Here are some recent projects I&#39;ve worked on, showcasing my skills as a full stack developer. I&#39;m committed to creating functional and visually appealing websites that align with your business goals. </p>
         </header>
         {/* <CrowdControl /> */}
         <TruffleHealth />
