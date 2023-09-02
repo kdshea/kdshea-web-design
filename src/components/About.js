@@ -5,8 +5,9 @@ import Kate from '../assets/kate.jpg'
 import UMass from '../assets/umass.jpg'
 import GA from '../assets/ga.jpg'
 import Unix from '../assets/unix.jpg'
+import Code from '../assets/code.jpg'
 import Beantown from '../assets/beantown.jpg'
-import Shanty from '../assets/shanty.jpg'
+// import Shanty from '../assets/shanty.jpg'
 import Kdshea from '../assets/kdshea.png'
 import Massasoit from '../assets/massasoit.jpg'
 import Book1 from '../assets/book1.jpg'
@@ -38,7 +39,9 @@ const About = () => {
     const diff = today - start
     const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365))
     const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30))
-    if (months > 0) {
+    if (years < 1) {
+      return `${months} mos`
+    } else if (months > 0) {
       return `${years} yrs ${months} mos`
     }  else {
       return `${years} yrs`
@@ -56,16 +59,16 @@ const About = () => {
           <div className="about-text">
             <header>
               <h2 className="first-line">Welcome!</h2>
-              <p>My name is Kate Shea</p>
+              <p className="hero-green">My name is Kate Shea</p>
             </header>
             <p>As a software engineer, I thrive on solving complex problems and building innovative solutions. With 7 years of experience with front end web development and one year of expertise with server-side programming and back end technologies, I&#39;m well-equipped to tackle a wide range of development challenges and deliver end-to-end solutions. I have hands-on experience working on diverse projects, including web applications, RESTful APIs, and database management.</p>
             <p>I&#39;m excited to leverage my technical expertise to create exceptional experiences for your users. If you&#39;re interested in collaborating or have any questions, please don&#39;t hesitate to reach out. Let&#39;s connect and bring ideas to life!</p>
           </div>
         </div>
-        <div className="links">
+        <div className="btn call-btn links">
           <a href="https://calendly.com/kdshea/15-minute-chat" target="_blank" rel="noopener noreferrer">
-            <i className="fa-solid fa-video"></i>
-            <span className="call"> Schedule a Call</span>
+            <i className="fa-solid fa-video call-text"></i>
+            <span className="call call-text"> Schedule a Call</span>
           </a>
         </div>
         <div className="links">
@@ -111,24 +114,24 @@ const About = () => {
             <div className="card-wrapper">
               <Card>
                 <div className="card-img-wrapper">
-                  <Card.Img variant="top" src={GA} />
-                </div>
-                <Card.Body>
-                  <Card.Title>Software Engineering Immersive</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">General Assembly</Card.Subtitle>
-                  <Card.Subtitle className="mb-2 text-muted">London, UK 2022</Card.Subtitle>
-                </Card.Body>
-              </Card>
-              {/* <Card>
-                <div className="card-img-wrapper">
                   <Card.Img variant="top" src={UMass} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Nursing RN-to-BSN, BS</Card.Title>
+                  <Card.Title>Biochemical Engineering, BS</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">University of Massachusetts Amherst</Card.Subtitle>
-                  <Card.Subtitle className="mb-2 text-muted">Amherst, MA 2022</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Amherst, MA 2015</Card.Subtitle>
                 </Card.Body>
-              </Card> */}
+              </Card>
+              <Card>
+                <div className="card-img-wrapper">
+                  <Card.Img variant="top" src={GA} />
+                </div>
+                <Card.Body>
+                  <Card.Title>Front End Web Development</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">General Assembly</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Boston, MA 2016</Card.Subtitle>
+                </Card.Body>
+              </Card>
               <Card>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Massasoit} />
@@ -144,21 +147,25 @@ const About = () => {
                   <Card.Img variant="top" src={GA} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Front End Web Development</Card.Title>
+                  <Card.Title>Software Engineering</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">General Assembly</Card.Subtitle>
-                  <Card.Subtitle className="mb-2 text-muted">Boston, MA 2016</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">London, UK 2022</Card.Subtitle>
                 </Card.Body>
               </Card>
-              <Card>
+              {/* <Card>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={UMass} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Biochemical Engineering, BS</Card.Title>
+                  <Card.Title>Nursing RN-to-BSN, BS</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">University of Massachusetts Amherst</Card.Subtitle>
-                  <Card.Subtitle className="mb-2 text-muted">Amherst, MA 2015</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Amherst, MA 2022</Card.Subtitle>
                 </Card.Body>
-              </Card>
+              </Card> */}
+
+
+
+
             </div>
           </div>
           <div className="about-background">
@@ -175,8 +182,18 @@ const About = () => {
                 </div>
                 <Card.Body>
                   <Card.Title>Web Developer</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Unix Commerce, Remote</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Unix Commerce · Remote</Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">2023 - Now ·  {getEmploymentDuration('2023-06-01')}</Card.Subtitle>
+                </Card.Body>
+              </Card>
+              <Card>
+                <div className="card-img-wrapper">
+                  <Card.Img variant="top" src={Code} />
+                </div>
+                <Card.Body>
+                  <Card.Title>Front End Developer, Volunteer</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Code for Boston · Boston, MA</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">2022 - Now ·  {getEmploymentDuration('2022-02-01')}</Card.Subtitle>
                 </Card.Body>
               </Card>
               <Card>
@@ -185,11 +202,11 @@ const About = () => {
                 </div>
                 <Card.Body>
                   <Card.Title>Full Stack Developer</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">kdshea web design, Boston, MA</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">KD Shea Web Design · Freelance</Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">2021 - Now ·  {getEmploymentDuration('2021-06-01')}</Card.Subtitle>
                 </Card.Body>
               </Card>
-              <Card>
+              {/* <Card>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Shanty} />
                 </div>
@@ -198,14 +215,14 @@ const About = () => {
                   <Card.Subtitle className="mb-2 text-muted">The Seafood Shanty, Edgartown, MA</Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">2013 - 2021 · 8 yrs 7 mos</Card.Subtitle>
                 </Card.Body>
-              </Card>
+              </Card> */}
               <Card>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Beantown} />
                 </div>
                 <Card.Body>
                   <Card.Title>Assisstant General Manager</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Beantown Pub, Boston, MA</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Beantown Pub · Boston, MA</Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">2008 - 2020 · 11 yrs 10 mos</Card.Subtitle>
                 </Card.Body>
               </Card>
@@ -218,7 +235,7 @@ const About = () => {
           </div>
           <div className="about-reading">
             <div className="about-title">
-              <a href="https://www.goodreads.com/list/show/189994.A_Web_Developer_s_Reading_List" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.goodreads.com/kdshea" target="_blank" rel="noopener noreferrer">
                 <div className="about-icon-flex">
                   <div className="about-icon"><i className="fa-brands fa-goodreads"></i></div>
                   <h2>Reading</h2>
@@ -229,23 +246,23 @@ const About = () => {
             </div>
             <div className="card-wrapper">
               <Card>
-                <Card.Header>Book -To Learn</Card.Header>
+                <Card.Header>Book · To Learn</Card.Header>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Book1} />
                 </div>
                 <Card.Body>
-                  <Card.Title>The Climate Diet</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Paul Greenberg</Card.Subtitle>
+                  <Card.Title>Braiding Sweetgrass</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Robin Wall Kimmerer</Card.Subtitle>
                 </Card.Body>
               </Card>
               <Card>
-                <Card.Header>Book -For Fun</Card.Header>
+                <Card.Header>Book · For Fun</Card.Header>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Book2} />
                 </div>
                 <Card.Body>
-                  <Card.Title>This Is Your Mind on Plants</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Michael Pollan</Card.Subtitle>
+                  <Card.Title>Sea of Tranquility</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Emily St. John Mandel</Card.Subtitle>
                 </Card.Body>
               </Card>
               <Card>
@@ -254,8 +271,8 @@ const About = () => {
                   <Card.Img variant="top" src={Audiobook1} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Wild</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Cheryl Strayed</Card.Subtitle>
+                  <Card.Title>What Happened to You?</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Bruce D. Perry, Oprah Winfrey</Card.Subtitle>
                 </Card.Body>
               </Card>
             </div>
@@ -273,23 +290,23 @@ const About = () => {
             </div>
             <div className="card-wrapper">
               <Card>
-                <Card.Header>Podcast -To Learn</Card.Header>
+                <Card.Header>Podcast · To Learn</Card.Header>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Podcast1} />
                 </div>
                 <Card.Body>
-                  <Card.Title>ChatGPT and the Future of Everything</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Coding Blocks</Card.Subtitle>
+                  <Card.Title>Building the Future of Microservices</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">MongoDB Podcast</Card.Subtitle>
                 </Card.Body>
               </Card>
               <Card>
-                <Card.Header>Podcast -For Fun</Card.Header>
+                <Card.Header>Podcast · For Fun</Card.Header>
                 <div className="card-img-wrapper">
                   <Card.Img variant="top" src={Podcast2} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Everglades National Park</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">The Washington Post Field Trip</Card.Subtitle>
+                  <Card.Title>Sri Lanka</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Anthony Bourdain: Parts Unkown</Card.Subtitle>
                 </Card.Body>
               </Card>
               <Card>
@@ -298,8 +315,8 @@ const About = () => {
                   <Card.Img variant="top" src={Music1} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Me Gustas Tu</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Manu Chao</Card.Subtitle>
+                  <Card.Title>Hell N Back</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">Bakar</Card.Subtitle>
                 </Card.Body>
               </Card>
             </div>
@@ -321,20 +338,20 @@ const About = () => {
                 columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                 <Masonry gutter='1.5rem'>
                   {images.map((image, i) => (
-                    <img key={i} src={image} alt={'Flickr'} style={{ width: '100%', display: 'block' }}
+                    <img key={i} src={image} style={{ width: '100%', display: 'block' }}
                     />
                   ))}
                 </Masonry>
               </ResponsiveMasonry>
             </div>
-            <div className="btn-flex">
+            <div className= {galleryIsHidden ? 'btn-flex' : 'btn-flex  hide-btn'}>
               <button className={ galleryIsHidden ? 'btn' : 'display-none btn' }onClick={handleGalleryToggle}>View Gallery <i className="fa-solid fa-arrow-down-long"></i></button>
               <button className={ galleryIsHidden ? 'display-none btn' : 'btn' }onClick={handleGalleryToggle}>Hide <i className="fa-solid fa-arrow-up-long"></i></button>
             </div>
           </div>
         </div>
       </div>
-      <div className="image-section palm-4"></div>
+      <div className="image-section palm-4">Here</div>
     </section>
   )
 }
