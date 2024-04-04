@@ -61,7 +61,7 @@ const About = () => {
               <h2 className="first-line">Welcome!</h2>
               <p className="hero-green">My name is Kate Shea</p>
             </header>
-            <p>As a software engineer, I thrive on solving complex problems and building innovative solutions. With 7 years of experience with front end web development and one year of expertise with server-side programming and back end technologies, I&#39;m well-equipped to tackle a wide range of development challenges and deliver end-to-end solutions. I have hands-on experience working on diverse projects, including web applications, RESTful APIs, and database management.</p>
+            <p>As a software engineer, I thrive on solving complex problems and building innovative solutions. With over 8 years of experience with front end web development and server-side programming, I&#39;m well-equipped to tackle a wide range of development challenges and deliver end-to-end solutions. I have hands-on experience working on diverse projects, including web applications, RESTful APIs, and database management.</p>
             <p>I&#39;m excited to leverage my technical expertise to create exceptional experiences for your users. If you&#39;re interested in collaborating or have any questions, please don&#39;t hesitate to reach out. Let&#39;s connect and bring ideas to life!</p>
           </div>
         </div>
@@ -351,7 +351,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="image-section palm-4">Here</div>
+      <div className="image-section palm-4"></div>
     </section>
   )
 }

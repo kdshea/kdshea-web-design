@@ -12,12 +12,12 @@ const Hero = () => {
           <h1>Kate Shea</h1>
           <h2>full stack eveloper | kdshea web design</h2>
 
-          <div className="hero-arrow">
+          {/* <div className="hero-arrow">
             <a href="#consultation">
               <p>accepting new freelance clients and interesting project opportunities</p>
               <i className="fa-solid fa-chevron-down"></i>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
